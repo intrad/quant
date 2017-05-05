@@ -15,17 +15,24 @@ Quant package defines 3 python files.
 	
 3) backtest.py:
 	Defines BackTest class that accepts given portfolio and signals and defines method to backtest and generates backtesting report.
+	Also has simple example implementation using one stock
+	backtest report has 
 
 Assumptions
 --------------------
 	- Initial Cash Balance of Portfolio = 1000
 	- Supports multistocks
-	- Negative cash implies you are allowed to borrow cash interest free.
+	- Negative cash implies you are allowed to borrow cash interest free
 	- Negative stock quantity implies short selling is allowed
-	- Portfolio compises of cash and stocks trading in any exchange but can be valued in single currency in single currency eg. Rs.
+	- Portfolio compises of cash and stocks trading in any exchange but can be valued in single currency in single currency eg. Rs
 	- No transaction costs
 	- No brokerages
-	
+	- Trading Signals generated for single lot
+	- Valuation of portfolio is done at Close Price
+	- Any buy/sell signals is executed at Open Price
+	- All buy, sell order signals are always fulfilled by the market
+
+By further enhancing this code we can easily handle couple of above assumptions easily.
 	
 Required Package Files
 --------------------
